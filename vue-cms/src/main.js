@@ -4,6 +4,10 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+import axios from 'axios';
+Vue.prototype.$http = axios;
+axios.defaults.baseURL = 'http://localhost:5000';
+
 Vue.config.productionTip = false
 
 import 'animate.css/animate.css';

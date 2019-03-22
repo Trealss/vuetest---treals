@@ -24,11 +24,13 @@
 
 <script>
   import Vue from 'vue';
-  import { NavBar, Tabbar, TabbarItem,Swipe, SwipeItem } from 'vant';
+  import { NavBar, Tabbar, TabbarItem,Swipe, SwipeItem, Card, Button } from 'vant';
   Vue
     .use(NavBar)
     .use(Tabbar).use(TabbarItem)
     .use(Swipe).use(SwipeItem)
+    .use(Card)
+    .use(Button)
 
 
 export default {
@@ -41,7 +43,7 @@ export default {
 </script>
 <style>
   .app {
-    padding-top: 46px;
+    padding: 46px 0 50px;
     overflow-x: hidden;
   }
 

@@ -10,50 +10,49 @@
     </div>
     <!--九宫格-->
     <div class="demo-icon">
-      <div class="van-col van-col--6">
+      <router-link class="van-col van-col--6" to="/home/newsCom" tag="div">
         <i class="van-icon">
           <img src="/static/gird/menu1.png" alt="">
         </i>
-        <span>location-o</span>
-      </div>
+        <span>新闻资讯</span>
+      </router-link>
       <div class="van-col van-col--6">
         <i class="van-icon">
           <img src="/static/gird/menu2.png" alt="">
         </i>
-        <span>location-o</span>
+        <span>图片分享</span>
       </div>
       <div class="van-col van-col--6">
         <i class="van-icon">
           <img src="/static/gird/menu3.png" alt="">
           <img src="" alt="">
         </i>
-        <span>location-o</span>
+        <span>商品购买</span>
       </div>
       <div class="van-col van-col--6">
         <i class="van-icon">
           <img src="/static/gird/menu4.png" alt="">
         </i>
-        <span>location-o</span>
+        <span>留言反馈</span>
       </div>
       <div class="van-col van-col--6">
         <i class="van-icon">
           <img src="/static/gird/menu5.png" alt="">
         </i>
-        <span>location-o</span>
+        <span>视频区域</span>
       </div>
       <div class="van-col van-col--6">
         <i class="van-icon">
           <img src="/static/gird/menu6.png" alt="">
         </i>
-        <span>location-o</span>
+        <span>联系我们</span>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-  import axios from 'axios';
-  axios.defaults.baseURL = 'http://localhost:5000';
+
 
 	export default {
 		name: "home",
@@ -62,7 +61,7 @@
     }),
     created() {
 		  // 发送Ajax请求
-      axios.get('/api/getlunbo').then(res => {
+      this.$http.get('/api/getlunbo').then(res => {
         // 解构data中的message 和 status
         let {data: {status, message}} = res;
         if (status === 0) {
